@@ -4,7 +4,7 @@ import subprocess
 
 linux = {
     'device_type': 'linux',
-    'ip': 'ip of pve',
+    'ip': '1.1.1.1',
     'username': 'username',
     'password': 'password',
     'port': 1111,
