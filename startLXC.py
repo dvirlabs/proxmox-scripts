@@ -8,13 +8,13 @@ import sys
 import os
 
 file_name = os.path.basename(sys.argv[0])
-es = Elasticsearch(['http://dvir:dvir4210200H@192.168.1.250:31247'])
+es = Elasticsearch(['http://<elastic-user>:<elastic-password>@<elastic-ip:port (default-9200)>'])
 
 linux = {
     'device_type': 'linux',
-    'ip': '192.168.1.120',
-    'username': 'netmiko',
-    'password': 'netmiko1234',
+    'ip': '1.1.1.1',
+    'username': 'username',
+    'password': 'password',
     'port': 22,
     'verbose': True
 }
@@ -49,5 +49,3 @@ for container in getConID.keys(): # Var that get the value of each container in 
             log_file.write(getDate[1] + " Container " + getConID[container] + " was started" + "\n")
     else:
         print ("Container " + getConID[container] + ' ' + container + ' ' + re.sub("status:" , "is:" , execCommand[1])) # Print the status of the container
-
-
